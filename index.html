@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mushoku Tensei — Tudo sobre o anime</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Mushoku Tensei</h1>
+      <p class="subtitle">Guia completo — Personagens, Arcos, Magia e Músicas</p>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#sinopse">Sinopse</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#arcos">Arcos</a>
+      <a href="#magia">Sistema de Magia</a>
+      <a href="#media">Mídia</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+    <button id="themeToggle" class="btn small">✨ Tema</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h2 class="typed" data-text='["Rudeus Greyrat — uma nova vida.","Mundo rico em magia, perigos e redenção.","Explore personagens, arcos e trilha sonora."]'></h2>
+        <p>Bem-vindo ao guia não oficial de <strong>Mushoku Tensei: Jobless Reincarnation</strong>. Conteúdo focado na história, personagens, arcos e elementos do mundo do anime/light novel.</p>
+        <div class="actions">
+          <button class="btn" id="openModal">Ver Trailer</button>
+          <a class="btn ghost" href="#personagens">Conheça os personagens</a>
+        </div>
+      </div>
+      <canvas id="magic"></canvas>
+    </section>
+
+    <section id="sinopse" class="card">
+      <h3>Sinopse</h3>
+      <p><strong>Mushoku Tensei</strong> conta a história de um homem sem oportunidades que reencarna em um mundo de fantasia como <em>Rudeus Greyrat</em>. Com memórias de sua vida anterior, ele decide viver sem arrependimentos, aprendendo magia, formando laços e enfrentando as consequências de suas escolhas. A narrativa mistura aventura, drama e crescimento pessoal.</p>
+      <p><strong>Temas principais:</strong> redenção, crescimento, responsabilidade, família e os riscos da ambição.</p>
+    </section>
+
+    <section id="personagens" class="card">
+      <h3>Personagens Principais</h3>
+      <div class="grid-2">
+        <article class="profile">
+          <h4>Rudeus Greyrat</h4>
+          <p>Protagonista reencarnado. Talentoso em magia, complexo emocionalmente, busca se tornar uma pessoa melhor.</p>
+        </article>
+        <article class="profile">
+          <h4>Eris Boreas Greyrat</h4>
+          <p>Guerreira determinada, inicia como aluna de Rudeus e evolui para uma figura forte e leal.</p>
+        </article>
+        <article class="profile">
+          <h4>Roxy Migurdia</h4>
+          <p>Maga e mentora de Rudeus. Inteligente e carismática, tem papel crucial no desenvolvimento mágico dele.</p>
+        </article>
+        <article class="profile">
+          <h4>Sylphiette</h4>
+          <p>Amiga de infância e interesse romântico. Simpática, com forte vínculo emocional com Rudeus.</p>
+        </article>
+      </div>
+      <div class="row small-gap">
+        <button class="btn small" id="showAllChars">Mostrar mais</button>
+        <a class="btn small ghost" href="#arcos">Ir para arcos</a>
+      </div>
+    </section>
+
+    <section id="arcos" class="card">
+      <h3>Arcos Narrativos</h3>
+      <ul class="list-arcs">
+        <li><strong>Infância e Aprendizado:</strong> treinamento com Roxy e primeiros passos na magia.</li>
+        <li><strong>Viagem e Aventuras:</strong> Erros, crescimento e encontros com aliados e inimigos.</li>
+        <li><strong>Conflitos Maiores:</strong> eventos que testam moral, poder e responsabilidades do protagonista.</li>
+        <li><strong>Redenção e Futuro:</strong> decisões que moldam o destino de Rudeus e seu mundo.</li>
+      </ul>
+      <div class="row">
+        <button class="btn small" id="openArcModal">Resumo rápido</button>
+        <div class="status" id="arcStatus">Clique para resumo</div>
+      </div>
+    </section>
+
+    <section id="magia" class="card">
+      <h3>Sistema de Magia</h3>
+      <p>O mundo possui um sistema mágico com escolas, rituais e limites. Rudeus é reconhecido por sua habilidade rápida de aprendizado e uso de magias multi-escola.</p>
+      <div class="accordion">
+        <button class="acc-btn">Escolas de Magia <span>+</span></button>
+        <div class="acc-panel"><p>Elemental, Cura, Transmutação, Encantamento — cada uma com técnicas e estruturas próprias.</p></div>
+        <button class="acc-btn">Aprendizado e Mana <span>+</span></button>
+        <div class="acc-panel"><p>Mana é a energia usada para lançar magias. Treino, estudo e talento são cruciais.</p></div>
+      </div>
+    </section>
+
+    <section id="media" class="card">
+      <h3>Mídia e Trilha Sonora</h3>
+      <p>O anime é adaptado da light novel escrita por Rifujin na Magonote. A trilha sonora e os temas de abertura/encerramento são destaque, ajudando a criar a atmosfera emocional da obra.</p>
+      <div class="carousel" id="carousel">
+        <div class="slides">
+          <figure class="slide active"><img src="https://staticg.sportskeeda.com/editor/2023/10/eb18e-16982358697897-1920.jpg" alt="Rudeus"><figcaption>Rudeus</figcaption></figure>
+          <figure class="slide"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=60" alt="Eris"><figcaption>Eris</figcaption></figure>
+          <figure class="slide"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="Roxy"><figcaption>Roxy</figcaption></figure>
+        </div>
+        <div class="carousel-controls">
+          <button class="btn small" id="prev">◀</button>
+          <button class="btn small" id="next">▶</button>
+        </div>
+      </div>
+      <div class="row small-gap" style="margin-top:12px">
+        <button class="btn small" id="playOST">Tocar trecho da OST (simulado)</button>
+        <div class="status" id="mediaStatus">Parado</div>
+      </div>
+    </section>
+
+    <section id="trivia" class="card">
+      <h3>Trivia e Curiosidades</h3>
+      <ul class="trivia-list">
+        <li>Baseado na light novel de Rifujin na Magonote.</li>
+        <li>Tem temas de crescimento, arrependimento e segundas chances.</li>
+        <li>Mix de drama, comédia e cenas de ação bem coreografadas.</li>
+      </ul>
+      <div class="row">
+        <button class="btn small" id="randomTrivia">Curiosidade aleatória</button>
+        <div class="status" id="triviaStatus">Clique para curiosidade</div>
+      </div>
+    </section>
+
+    <section id="gallery" class="card">
+      <h3>Galeria</h3>
+      <div class="grid-gallery">
+        <figure><img src="https://staticg.sportskeeda.com/editor/2023/10/eb18e-16982358697897-1920.jpg" alt="Mushoku"><figcaption>Arte</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=60" alt="paisagem"><figcaption>Cenário</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="magia"><figcaption>Magia</figcaption></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Guia não oficial • Conteúdo para aprendizado e homenagem a Mushoku Tensei</p>
+    <p class="muted">Este site é um exemplo educativo e deve respeitar direitos autorais ao usar imagens oficiais.</p>
+  </footer>
+
+  <!-- Modal demo -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close" id="closeModal">×</button>
+      <h4>Trailer (simulado)</h4>
+      <p>Exibição de trailer e informações adicionais sobre Mushoku Tensei.</p>
+      <div class="demo-buttons">
+        <button class="btn" id="demoNotify">Abrir site oficial</button>
+        <button class="btn" id="demoToast">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
