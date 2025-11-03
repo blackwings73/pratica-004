@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mushoku Tensei — Versionamento, Deploy e Infraestrutura</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Mushoku Tensei</h1>
+      <p class="subtitle">Versionamento • Deploy • Infraestrutura</p>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#versionamento">Versionamento</a>
+      <a href="#deploy">Deploy</a>
+      <a href="#infra">Infraestrutura</a>
+      <a href="#recursos">Recursos</a>
+    </nav>
+    <button id="themeToggle" class="btn small">✨ Tema</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h2 class="typed" data-text='["Reencarne. Reescreva. Controle seu código.","Deploy como se lançasse uma magia.","Infraestrutura — o mundo que sustenta a aplicação."]'></h2>
+        <p>Um site interativo para aprender Versionamento, Deploy e Infraestrutura com a paleta de <em>Mushoku Tensei</em>.</p>
+        <div class="actions">
+          <button class="btn" id="openModal">Ver Demonstração</button>
+          <a class="btn ghost" href="#versionamento">Começar</a>
+        </div>
+      </div>
+      <canvas id="magic"></canvas>
+    </section>
+
+    <section id="versionamento" class="card">
+      <h3>1. Versionamento</h3>
+      <p>Controle de versões usando <strong>Git</strong>. Faça commits, crie branches e colabore.</p>
+      <pre class="code" id="gitCode">git init
+git add .
+git commit -m "primeiro commit"</pre>
+      <div class="row">
+        <button class="btn small" data-copy="#gitCode">Copiar comando</button>
+        <button class="btn small" id="simulateCommit">Simular Commit</button>
+        <div class="status" id="statusGit">Status: pronto</div>
+      </div>
+    </section>
+
+    <section id="deploy" class="card">
+      <h3>2. Deploy (Implantação)</h3>
+      <p>Coloque sua aplicação no ar — manualmente ou via CI/CD.</p>
+      <div class="grid">
+        <div class="tile">
+          <h4>GitHub Pages</h4>
+          <p>Hosting estático grátis para repositórios.</p>
+        </div>
+        <div class="tile">
+          <h4>Vercel / Netlify</h4>
+          <p>Deploy automático a cada push com preview builds.</p>
+        </div>
+        <div class="tile tile-action">
+          <h4>Simulação de Deploy</h4>
+          <p>Clique para começar uma animação de deploy</p>
+          <button class="btn" id="startDeploy">Iniciar Deploy</button>
+          <div class="progress" id="deployProgress"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="infra" class="card">
+      <h3>3. Infraestrutura</h3>
+      <p>Servidores, banco de dados, rede, DNS, SSL e backups — escaláveis em nuvem.</p>
+      <div class="accordion">
+        <button class="acc-btn">Servidores <span>+</span></button>
+        <div class="acc-panel"><p>Máquinas físicas ou instâncias na nuvem (EC2, Compute Engine...).</p></div>
+        <button class="acc-btn">Banco de dados <span>+</span></button>
+        <div class="acc-panel"><p>Relacional ou NoSQL: Postgres, MySQL, MongoDB.</p></div>
+        <button class="acc-btn">Segurança <span>+</span></button>
+        <div class="acc-panel"><p>SSL, WAF, backups e monitoramento para manter sua aplicação segura.</p></div>
+      </div>
+    </section>
+
+    <section id="recursos" class="card">
+      <h3>Recursos Extras</h3>
+      <div class="carousel" id="carousel">
+        <div class="slides">
+          <figure class="slide active"><img src="https://staticg.sportskeeda.com/editor/2023/10/eb18e-16982358697897-1920.jpg" alt="Mushoku 1"><figcaption>Estética e paleta</figcaption></figure>
+          <figure class="slide"><img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=60" alt="cloud"><figcaption>Nuvem e Escalabilidade</figcaption></figure>
+          <figure class="slide"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="code"><figcaption>CI/CD e automação</figcaption></figure>
+        </div>
+        <div class="carousel-controls">
+          <button class="btn small" id="prev">◀</button>
+          <button class="btn small" id="next">▶</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito para aprendizado • Tema: Mushoku Tensei • Fundo preto e cores do anime</p>
+    <p class="muted">Arraste o cursor para ver partículas mágicas ✨</p>
+  </footer>
+
+  <!-- Modal demo -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close" id="closeModal">×</button>
+      <h4>Demonstração</h4>
+      <p>Este é um modal interativo que demonstra animações e ações do site.</p>
+      <div class="demo-buttons">
+        <button class="btn" id="demoNotify">Notificar</button>
+        <button class="btn" id="demoToast">Mostrar Toast</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
